@@ -89,6 +89,7 @@
 
   /* Layout */
   --container-width: 1200px;
+  --page-gutter: clamp(1rem, 4vw, 2rem);
   --sidebar-width: 260px;
   --header-height: 76px;
 

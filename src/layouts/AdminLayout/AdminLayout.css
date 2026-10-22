@@ -476,3 +476,24 @@
   }
 }
 .admin-signout{width:100%;border:0;background:transparent;text-align:left;font:inherit;cursor:pointer}.admin-signout:hover{background:rgb(255 255 255 / 8%)}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .admin-sidebar { width: 220px; }
+  .admin-main-area { margin-left: 220px; }
+  .admin-search { width: min(190px, 22vw); }
+}
+
+@media (max-width: 900px) {
+  .admin-sidebar { width: min(84vw, 300px); }
+}
+
+@media (max-width: 600px) {
+  .admin-topbar { align-items: stretch; flex-wrap: wrap; gap: .6rem; padding: .65rem .85rem; }
+  .admin-topbar-left, .admin-topbar-actions { width: 100%; }
+  .admin-topbar-actions { justify-content: flex-end; }
+  .admin-search { display: flex; width: auto; min-width: 0; flex: 1; }
+  .admin-search kbd, .admin-account-copy { display: none; }
+  .admin-content { padding: 1rem .85rem 1.5rem; }
+  .admin-demo-banner { margin-bottom: 1rem; padding: .7rem; font-size: .74rem; }
+  .admin-menu-toggle, .admin-icon-button { min-width: 44px; min-height: 44px; }
+}

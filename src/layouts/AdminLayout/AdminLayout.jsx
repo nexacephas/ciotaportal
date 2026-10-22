@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink, Outlet, Link, useNavigate } from "react-router-dom";
 import { useDemo } from "../../hooks/useDemo";
 import {
@@ -60,6 +60,15 @@ function AdminLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [adminSearch, setAdminSearch] = useState("");
 
+  useEffect(() => {
+    if (!sidebarOpen) return undefined;
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setSidebarOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [sidebarOpen]);
+
   const submitAdminSearch = (event) => {
     event.preventDefault();
     navigate(`/admin/members?search=${encodeURIComponent(adminSearch.trim())}`);
@@ -78,7 +87,7 @@ function AdminLayout() {
         />
       )}
 
-      <aside className={`admin-sidebar ${sidebarOpen ? "is-open" : ""}`}>
+      <aside id="admin-navigation-panel" className={`admin-sidebar ${sidebarOpen ? "is-open" : ""}`}>
         <Link
           to="/admin"
           className="admin-brand"
@@ -151,6 +160,8 @@ function AdminLayout() {
               className="admin-menu-toggle"
               onClick={() => setSidebarOpen(!sidebarOpen)}
               aria-label="Toggle admin navigation"
+              aria-expanded={sidebarOpen}
+              aria-controls="admin-navigation-panel"
             >
               {sidebarOpen ? <X size={21} /> : <Menu size={21} />}
             </button>

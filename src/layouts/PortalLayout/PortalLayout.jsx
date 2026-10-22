@@ -18,7 +18,7 @@ import {
   CircleHelp,
   Vote,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDemo } from "../../hooks/useDemo";
 import "./PortalLayout.css";
 
@@ -49,6 +49,15 @@ function PortalLayout() {
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  useEffect(() => {
+    if (!sidebarOpen) return undefined;
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setSidebarOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [sidebarOpen]);
+
   const isMember = location.pathname.startsWith("/member");
   const links = isMember ? memberLinks : applicantLinks;
   const roleName = isMember ? "Member Portal" : "Applicant Portal";
@@ -77,7 +86,7 @@ function PortalLayout() {
         />
       )}
 
-      <aside className={`portal-sidebar ${sidebarOpen ? "is-open" : ""}`}>
+      <aside id="portal-navigation-panel" className={`portal-sidebar ${sidebarOpen ? "is-open" : ""}`}>
         <Link to="/" className="portal-brand" onClick={closeSidebar}>
           <span className="portal-brand-mark">C</span>
           <span className="portal-brand-copy">
@@ -154,6 +163,8 @@ function PortalLayout() {
               className="portal-menu-toggle"
               onClick={() => setSidebarOpen(!sidebarOpen)}
               aria-label="Toggle sidebar"
+              aria-expanded={sidebarOpen}
+              aria-controls="portal-navigation-panel"
             >
               {sidebarOpen ? <X size={21} /> : <Menu size={21} />}
             </button>

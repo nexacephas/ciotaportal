@@ -459,3 +459,16 @@
     gap: 0.4rem;
   }
 }
+
+@media (max-width: 900px) {
+  .portal-sidebar { width: min(84vw, 300px); }
+}
+
+@media (max-width: 560px) {
+  .portal-topbar { align-items: center; flex-wrap: wrap; gap: .6rem; padding: .7rem .85rem; }
+  .portal-topbar-left, .portal-topbar-actions { width: 100%; }
+  .portal-topbar-actions { justify-content: flex-end; }
+  .portal-menu-toggle, .portal-icon-button { min-width: 44px; min-height: 44px; }
+  .portal-content { padding: 1rem .85rem 1.5rem; }
+  .portal-demo-banner { margin-bottom: 1rem; padding: .7rem; }
+}

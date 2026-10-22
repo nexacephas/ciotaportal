@@ -17,7 +17,7 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 0;
   min-height: 100vh;
 
   background: var(--color-background);
@@ -158,11 +158,38 @@ hr {
 /* Shared containers */
 
 .container {
-  width: min(
-    var(--container-width),
-    calc(100% - 3rem)
-  );
+  width: min(var(--container-width), calc(100% - (var(--page-gutter) * 2)));
   margin-inline: auto;
+}
+
+/* Keep long records and nested flex/grid content inside the viewport. */
+#root,
+main,
+section,
+article,
+aside,
+header,
+footer,
+.workspace-page,
+.public-main,
+.portal-content,
+.admin-content {
+  min-width: 0;
+}
+
+input,
+select,
+textarea,
+table {
+  max-width: 100%;
+}
+
+pre,
+code,
+dd,
+td,
+th {
+  overflow-wrap: anywhere;
 }
 
 .section {
@@ -328,10 +355,6 @@ hr {
 /* Responsive */
 
 @media (max-width: 768px) {
-  .container {
-    width: calc(100% - 2rem);
-  }
-
   .section {
     padding-block: var(--space-10);
   }
@@ -342,6 +365,16 @@ hr {
 
   :root {
     --header-height: 68px;
+  }
+}
+
+@media (max-width: 380px) {
+  :root {
+    --page-gutter: 0.875rem;
+  }
+
+  .btn {
+    white-space: normal;
   }
 }
 

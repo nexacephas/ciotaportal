@@ -300,9 +300,51 @@
 }
 
 @media (max-width: 520px) {
+  .public-header-inner {
+    gap: 0.75rem;
+  }
+
+  .public-menu-toggle {
+    display: grid;
+    place-items: center;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .public-brand {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .public-brand-copy small {
+    max-width: min(210px, 55vw);
+    line-height: 1.35;
+  }
+
+  .public-brand-mark {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+  }
+
   .public-topbar-inner {
     min-height: 34px;
     justify-content: center;
+  }
+
+  .public-topbar-inner > span {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.68rem;
+    line-height: 1.35;
+  }
+
+  .public-topbar-inner > span span {
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   .public-topbar-inner > a {
@@ -325,5 +367,17 @@
     flex-direction: column;
     justify-content: center;
     padding-block: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .public-hero h1 {
+    font-size: clamp(1.8rem, 9vw, 2.2rem);
+    letter-spacing: -0.04em;
+  }
+
+  .public-hero .eyebrow {
+    max-width: 100%;
+    white-space: normal;
   }
 }
