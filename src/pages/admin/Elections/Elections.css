@@ -1,0 +1,28 @@
+.admin-election-page { display: grid; gap: 1rem; }
+.admin-election-list { display: grid; gap: .85rem; }
+.admin-election-card { display: grid; gap: .65rem; }
+.admin-election-card h2, .admin-election-card p { margin: 0; }
+.admin-election-top, .admin-election-top span, .turnout-summary span { display: flex; align-items: center; gap: .5rem; }
+.admin-election-top { justify-content: space-between; flex-wrap: wrap; }
+.admin-election-top span { color: var(--text-muted); font-size: .84rem; }
+.turnout-summary { display: flex; gap: 1.2rem; flex-wrap: wrap; padding: .7rem 0; }
+.eligibility-review { border-top: 1px solid var(--border-color, #e5e7eb); padding: .7rem 0; }
+.eligibility-review summary { cursor: pointer; font-weight: 650; }
+.eligibility-review ul { display: grid; gap: .45rem; padding-left: 1.1rem; }
+.eligibility-review li { display: flex; justify-content: space-between; gap: .8rem; flex-wrap: wrap; font-size: .86rem; }
+.eligibility-yes { color: #176342; }
+.eligibility-no { color: #70531b; font-weight: 500; }
+.election-admin-results { display: grid; gap: .45rem; padding: .75rem; border-radius: .6rem; background: #f3f7f4; }
+.election-admin-results h3 { margin: 0; }
+.election-admin-results div { display: flex; justify-content: space-between; gap: .8rem; }
+.turnout-summary span { font-size: .9rem; }
+.admin-election-actions { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.election-editor-card { scroll-margin-top: 1rem; }
+.election-editor-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.election-editor-heading h2 { margin: .3rem 0 0; }
+.election-editor-form { display: grid; gap: 1rem; }
+.election-settings { display: grid; gap: .6rem; border: 1px solid var(--border-color, #d9dfdc); border-radius: .65rem; padding: 1rem; }
+.election-settings legend { padding: 0 .3rem; font-weight: 700; }
+.election-admin-error { color: #a22; }
+.election-admin-success { color: #176342; }
+.election-save-note { padding: .75rem; color: #70531b; background: #fff8e9; border-radius: .55rem; font-size: .86rem; }

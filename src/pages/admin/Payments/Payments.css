@@ -1,0 +1,20 @@
+@import "../../../components/WorkspacePage/WorkspacePage.css";
+.admin-payments-page { display: grid; gap: 1rem; }
+.admin-charge-table { overflow-x: auto; }
+.admin-table-head, .admin-table-row { display: grid; grid-template-columns: 1.1fr 1.4fr .8fr .7fr 1fr; align-items: center; gap: .8rem; min-width: 760px; padding: .75rem .4rem; border-bottom: 1px solid var(--border-color, #e5e7eb); }
+.admin-table-head { color: var(--text-muted); font-size: .78rem; font-weight: 700; text-transform: uppercase; }
+.admin-table-row span { display: grid; gap: .2rem; }
+.admin-table-row small, .admin-transaction summary small { display: block; color: var(--text-muted); font-size: .78rem; }
+.admin-payment-heading { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; margin-bottom: .8rem; }
+.admin-payment-heading h2 { margin: 0 auto 0 0; }
+.admin-payment-search { display: flex; align-items: center; gap: .4rem; padding: .45rem .6rem; border: 1px solid var(--border-color, #d9dfdc); border-radius: .5rem; }
+.admin-payment-search input { min-width: min(18rem, 55vw); border: 0; outline: 0; }
+.admin-payment-filter select { min-height: 2.4rem; border: 1px solid var(--border-color, #d9dfdc); border-radius: .5rem; padding: .3rem .5rem; }
+.admin-transaction { border-top: 1px solid var(--border-color, #e5e7eb); }
+.admin-transaction summary { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: .75rem; padding: .85rem .2rem; cursor: pointer; list-style: none; }
+.admin-transaction summary::-webkit-details-marker { display: none; }
+.admin-transaction-detail { padding: 0 .3rem 1rem; }
+.admin-transaction-detail p { margin: .35rem 0; overflow-wrap: anywhere; }
+.admin-reconcile-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .75rem; }
+.payment-type-card > div { display: flex; justify-content: space-between; gap: .8rem; padding: .6rem 0; border-top: 1px solid var(--border-color, #e5e7eb); }
+@media (max-width: 650px) { .admin-payment-heading { align-items: stretch; }.admin-payment-heading h2 { width: 100%; }.admin-payment-search { flex: 1 1 100%; }.admin-transaction summary { grid-template-columns: minmax(0,1fr) auto; }.admin-transaction summary > .status-badge { grid-column: 1 / -1; justify-self: start; } }

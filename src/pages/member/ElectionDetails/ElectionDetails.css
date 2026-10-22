@@ -1,0 +1,23 @@
+.election-details-grid { display: grid; gap: 1rem; }
+.election-info { display: grid; gap: .7rem; }
+.election-info h2, .election-info p { margin: 0; }
+.election-card-top > span { color: var(--text-muted); font-size: .82rem; }
+.eligibility-message { display: flex; align-items: flex-start; gap: .65rem; padding: .85rem; border-radius: .65rem; background: var(--surface-subtle, #f5f7f8); }
+.eligibility-message p { margin: .25rem 0 0; }
+.is-eligible { color: #176342; background: #edf8f1; }
+.is-ineligible { color: #834b19; background: #fff7e8; }
+.candidate-list { display: grid; gap: .75rem; }
+.candidate-card { display: flex; gap: .85rem; padding: .75rem 0; border-bottom: 1px solid var(--border-color, #e5e7eb); }
+.candidate-card h3, .candidate-card p { margin: 0 0 .35rem; }
+.candidate-avatar { display: grid; flex: 0 0 2.6rem; width: 2.6rem; height: 2.6rem; place-items: center; border-radius: 50%; color: var(--color-primary, #174d3c); background: #e8f2ed; font-weight: 700; }
+.ballot-form { display: grid; gap: .85rem; }
+.ballot-form h2 { display: flex; gap: .5rem; align-items: center; margin: 0; }
+.ballot-form p { margin: 0; }
+.ballot-form fieldset { display: grid; gap: .5rem; border: 0; padding: 0; }
+.ballot-form legend { margin-bottom: .4rem; font-weight: 700; }
+.ballot-option { display: flex; align-items: center; gap: .6rem; padding: .75rem; border: 1px solid var(--border-color, #d9dfdc); border-radius: .55rem; cursor: pointer; }
+.form-error { color: #a22; }
+.form-success { display: flex; gap: .5rem; align-items: center; color: #176342; }
+.small-note { display: flex; gap: .4rem; align-items: center; color: var(--text-muted); font-size: .83rem; }
+.result-row { display: flex; justify-content: space-between; gap: .8rem; padding: .65rem 0; border-top: 1px solid var(--border-color, #e5e7eb); }
+@media (min-width: 900px) { .election-details-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; } }

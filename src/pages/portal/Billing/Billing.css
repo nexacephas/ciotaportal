@@ -1,0 +1,29 @@
+.billing-page { display: grid; gap: 1rem; }
+.billing-disclaimer { display: flex; gap: .6rem; align-items: flex-start; padding: .85rem; border-radius: .6rem; color: #70531b; background: #fff8e9; font-size: .88rem; }
+.billing-charge-list, .billing-payment-list { display: grid; }
+.billing-charge, .billing-payment-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: .85rem; padding: .9rem 0; border-bottom: 1px solid var(--border-color, #e5e7eb); }
+.billing-charge:last-child, .billing-payment-row:last-child { border-bottom: 0; }
+.billing-charge h3, .billing-charge p { margin: .3rem 0; }
+.billing-charge p, .billing-charge small, .billing-payment-row small { color: var(--text-muted); }
+.billing-charge-type { font-size: .8rem; color: var(--text-muted); }
+.billing-charge-action, .billing-payment-row > div:nth-child(2) { display: grid; justify-items: end; gap: .45rem; }
+.billing-payment-row { grid-template-columns: minmax(0, 1fr) auto auto; }
+.billing-payment-row > div:first-child { display: grid; gap: .2rem; }
+.billing-error { color: #a22; }
+.billing-success, .billing-paid { color: #176342; }
+.billing-failed, .billing-cancelled { color: #8a3d3d; }
+.payment-checkout { display: grid; gap: .5rem; }
+.payment-checkout p { margin: .2rem 0; }
+.payment-outcomes { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .75rem; }
+.receipt-content { display: grid; gap: .8rem; }
+.receipt-content h3, .receipt-content p { margin: 0; }
+.receipt-brand { display: flex; justify-content: space-between; font-weight: 800; }
+.receipt-brand span { font-size: .75rem; color: var(--text-muted); }
+.receipt-content dl { margin: 0; }
+.receipt-content dl div { display: flex; justify-content: space-between; gap: 1rem; padding: .45rem 0; border-bottom: 1px solid var(--border-color, #e5e7eb); }
+.receipt-content dt { color: var(--text-muted); }
+.receipt-content dd { margin: 0; text-align: right; }
+.receipt-content > p { color: var(--text-muted); font-size: .82rem; }
+.billing-page .modal-backdrop { z-index: 1000; }
+@media (max-width: 600px) { .billing-charge, .billing-payment-row { grid-template-columns: 1fr; align-items: start; }.billing-charge-action, .billing-payment-row > div:nth-child(2) { justify-items: start; }.payment-outcomes { display: grid; }.payment-outcomes .ui-button { width: 100%; } }
+@media print { body * { visibility: hidden !important; } .modal-backdrop, .modal-backdrop * { visibility: visible !important; } .modal-backdrop { position: absolute !important; inset: 0 !important; background: white !important; } .modal-panel > header, .receipt-content > button { display: none !important; } }

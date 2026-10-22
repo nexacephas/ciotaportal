@@ -1,0 +1,1 @@
+.page-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1.5rem}.page-heading h1{margin:.15rem 0 .45rem;font-size:clamp(1.7rem,3vw,2.4rem)}.page-heading p{margin:0;max-width:55rem}.page-heading-actions{display:flex;gap:.6rem;flex-wrap:wrap}@media(max-width:640px){.page-heading{align-items:flex-start;flex-direction:column}}

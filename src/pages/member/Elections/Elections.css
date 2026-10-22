@@ -1,0 +1,8 @@
+.election-page { display: grid; gap: 1.25rem; }
+.election-list { display: grid; gap: 1rem; }
+.election-card { display: grid; gap: .8rem; }
+.election-card h2, .election-card p { margin: 0; }
+.election-card-top, .election-card-foot, .election-card-top > span { display: flex; align-items: center; gap: .6rem; }
+.election-card-top, .election-card-foot { justify-content: space-between; flex-wrap: wrap; }
+.election-card-top > span, .election-card-foot > span { color: var(--text-muted); font-size: .88rem; }
+.election-demo-note { color: var(--text-muted); font-size: .85rem; }

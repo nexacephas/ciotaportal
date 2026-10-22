@@ -1,0 +1,3 @@
+export const paidPayments = (payments) => payments.filter((payment) => payment.status === "paid");
+export const getPaymentTotals = (payments) => ({ paid: paidPayments(payments).reduce((total, payment) => total + Number(payment.amount || 0), 0), pending: payments.filter((payment) => payment.status === "pending").reduce((total, payment) => total + Number(payment.amount || 0), 0), count: payments.length });
+export const filterPayments = (payments, query = "", status = "all") => payments.filter((payment) => (status === "all" || payment.status === status) && `${payment.reference} ${payment.purpose} ${payment.method}`.toLowerCase().includes(query.toLowerCase()));

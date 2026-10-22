@@ -1,0 +1,33 @@
+
+.register-page .auth-form {
+  gap: 15px;
+}
+
+.register-page .login-subtitle,
+.register-page .register-subtitle {
+  margin-bottom: 23px;
+}
+
+.register-terms {
+  align-items: flex-start;
+  line-height: 1.6;
+}
+
+.register-terms input {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.register-page .auth-switch {
+  margin: 20px 0;
+}
+
+.register-page .auth-demo-callout {
+  margin-top: 2px;
+}
+
+@media (max-width: 680px) {
+  .register-page h2 {
+    font-size: 29px;
+  }
+}

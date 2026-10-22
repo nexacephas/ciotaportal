@@ -1,0 +1,1 @@
+﻿import WorkspacePage from "../../../components/WorkspacePage/WorkspacePage"; import "./ApplicationForm.css"; export default function ApplicationForm(){return <WorkspacePage kind="application-form"/>;}

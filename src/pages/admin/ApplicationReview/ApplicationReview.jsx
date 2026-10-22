@@ -1,0 +1,1 @@
+﻿import WorkspacePage from "../../../components/WorkspacePage/WorkspacePage"; import "./ApplicationReview.css"; export default function ApplicationReview(){return <WorkspacePage kind="application-review"/>;}
